@@ -1,0 +1,213 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins", sans-serif;
+  text-decoration:none;
+}
+
+body{
+  background:#000;
+  overflow-x:hidden;
+}
+
+.hero-header{
+  min-height:100vh;
+}
+
+.wrapper{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+}
+
+/* ===== Header ===== */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:30px 0;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+}
+
+.logo i{
+  width:45px;
+  height:45px;
+  background:#007ced;
+  color:#000;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.4rem;
+  margin-right:10px;
+}
+
+.logo-text{
+  color:#fff;
+  font-size:22px;
+  font-weight:600;
+}
+
+.navlinks{
+  list-style:none;
+}
+
+.navlinks li{
+  display:inline-block;
+}
+
+.navlinks li a{
+  color:#ddd;
+  margin-left:30px;
+  transition:.3s;
+}
+
+.navlinks li a:hover{
+  color:#007ced;
+}
+
+/* ===== Toggle Button ===== */
+.togglebtn{
+  display:none;
+  cursor:pointer;
+}
+
+.togglebtn span{
+  display:block;
+  width:30px;
+  height:3px;
+  background:#007ced;
+  margin:6px 0;
+  transition:.4s;
+}
+
+/* ===== Hero Section ===== */
+.container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:80px;
+}
+
+.hero-pic{
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  overflow:hidden;
+  border:10px solid #007ced;
+}
+
+.hero-pic img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.hero-pic img:hover{
+  transform:scale(1.1);
+}
+
+.hero-text{
+  max-width:500px;
+}
+
+.hero-text h5{
+  color:#ccc;
+}
+
+.hero-text h5 span{
+  color:#007ced;
+}
+
+.hero-text h1{
+  font-size:3rem;
+  color:#007ced;
+  margin:10px 0;
+}
+
+.hero-text p{
+  color:#ddd;
+  line-height:1.6;
+}
+
+/* ===== Buttons ===== */
+.btn-group{
+  margin:30px 0;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 25px;
+  border-radius:30px;
+  border:2px solid #fff;
+  color:#fff;
+  margin-right:10px;
+  transition:.3s;
+}
+
+.btn.active{
+  background:#007ced;
+  border-color:#007ced;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+/* ===== Social ===== */
+.social i{
+  color:#fff;
+  font-size:18px;
+  margin-right:15px;
+  transition:.4s;
+}
+
+.social i:hover{
+  color:#007ced;
+  transform:rotate(360deg);
+}
+
+/* ===== Responsive ===== */
+@media(max-width:900px){
+  .togglebtn{
+    display:block;
+  }
+
+  .navlinks{
+    position:absolute;
+    top:80px;
+    right:-100%;
+    width:60%;
+    height:100vh;
+    background:#111;
+    padding-top:40px;
+    transition:.4s;
+  }
+
+  .navlinks.open{
+    right:0;
+  }
+
+  .navlinks li{
+    display:block;
+    text-align:center;
+    margin:20px 0;
+  }
+}
+
+@media(max-width:768px){
+  .container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-text{
+    margin-top:40px;
+  }
+}

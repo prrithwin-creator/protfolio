@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Jakia Nazneen | Frontend Developer</title>
+
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+	<section class="hero-header">
+		<div class="wrapper">
+
+			<!-- ===== Header ===== -->
+			<header>
+				<div class="logo">
+					<i class="fa-solid fa-j"></i>
+					<span class="logo-text">Jakia Nazneen</span>
+				</div>
+
+				<nav>
+					<div class="togglebtn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+
+					<ul class="navlinks">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">Resume</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- ===== Hero Section ===== -->
+			<div class="container">
+
+				<div class="hero-pic">
+					<img src="img/1.png" alt="Jakia Nazneen">
+				</div>
+
+				<div class="hero-text">
+					<h5>Hi, I'm <span class="input"></span></h5>
+					<h1>Jakia Nazneen</h1>
+
+					<p>
+						A passionate Frontend Developer skilled in HTML, CSS, JavaScript and MERN Stack.
+						I love building responsive and user-friendly web applications.
+					</p>
+
+					<div class="btn-group">
+						<!-- DOWNLOAD CV -->
+						<a href="cv/c:\Users\Administrator\Downloads\Jakia_Nazneen_CV.pdf" download class="btn active">
+							Download CV
+						</a>
+
+						<a href="#" class="btn">Contact Me</a>
+					</div>
+
+					<div class="social">
+						<a href="#"><i class="fa-brands fa-facebook"></i></a>
+						<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+						<a href="#"><i class="fa-brands fa-instagram"></i></a>
+						<a href="#"><i class="fa-brands fa-github"></i></a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Typed JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+	<script>
+		const toggleBtn = document.querySelector(".togglebtn");
+		const navLinks = document.querySelector(".navlinks");
+
+		toggleBtn.addEventListener("click", () => {
+			toggleBtn.classList.toggle("click");
+			navLinks.classList.toggle("open");
+		});
+
+		new Typed(".input", {
+			strings: ["Frontend Developer", "Web Developer", "MERN Stack Learner"],
+			typeSpeed: 70,
+			backSpeed: 50,
+			loop: true
+		});
+	</script>
+
+</body>
+
+</html>
